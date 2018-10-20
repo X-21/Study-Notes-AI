@@ -1,5 +1,5 @@
 # Faster RCNN
-#翻译：https://blog.csdn.net/quincuntial/article/details/79132243
+#翻译： 	
 http://noahsnail.com/2018/01/03/2018-01-03-Faster%20R-CNN%E8%AE%BA%E6%96%87%E7%BF%BB%E8%AF%91%E2%80%94%E2%80%94%E4%B8%AD%E6%96%87%E7%89%88/
 ### 概要
 
