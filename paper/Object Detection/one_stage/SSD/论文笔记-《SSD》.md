@@ -1,7 +1,7 @@
 #SSD
 
-#翻译：https://blog.csdn.net/quincuntial/article/details/78854930
-https://blog.csdn.net/denghecsdn/article/details/77429978
+#翻译：
+http://noahsnail.com/2017/12/11/2017-12-11-Single%20Shot%20MultiBox%20Detector%E8%AE%BA%E6%96%87%E7%BF%BB%E8%AF%91%E2%80%94%E2%80%94%E4%B8%AD%E8%8B%B1%E6%96%87%E5%AF%B9%E7%85%A7/
 
 ### 概要
 一种使用单个深度神经网络来检测图像中的目标的方法
