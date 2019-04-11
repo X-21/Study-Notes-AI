@@ -37,11 +37,11 @@ F6：
 
 感受野计算： 
 
-![](./Receptive Field.png)
+![](./Receptive_Field.png)
 
 C3层连接： 
 
-![](./feature combined.png)
+![](./feature_combined.png)
 
 | NO. | Layer | Input Size | Kernel Size | Stride | Output Size | Receptive Field |       神经元数量      |     参数数量      |       连接数数量      |
 |:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|

@@ -1,11 +1,22 @@
 # AlexNet
 翻译：https://blog.csdn.net/qianqing13579/article/details/71381016?locationNum=15&fps=1 
 资料：https://blog.csdn.net/langb2014/article/details/48286501 
+https://blog.csdn.net/yangdashi888/article/details/77918311 
+
+## LRN Local Response Normalization
+![](./LRN.png)
+论文公式中的N表示通道数(channel)。a,n/2,k,α,β分别表示函数中的input,depth_radius,bias,alpha,beta，其中n/2,k,α,β都是自定义的，特别注意一下∑叠加的方向是沿着通道方向的，即每个点值的平方和是沿着a中的第3维channel方向的，也就是一个点同方向的前面n/2个通道（最小为第0个通道）和后n/2个通道（最大为第d-1个通道）的点的平方和(共n+1个点)。
+
+
 https://blog.csdn.net/program_developer/article/details/79430119 
 
-
-
-# 网络分析
+上面这段话的意思，比如i=1即第1个（序号0）核（这里的第几个核说通俗点就是对第几层做处理）n/2=1时，那么只对这个数和他的下一层的那个数进行平方和，n/2=2那就是对下两层的数共三个数进行平方和。看不懂的话看代码就很直观了。
+--------------------- 
+作者：yangdashi888 
+来源：CSDN 
+原文：https://blog.csdn.net/yangdashi888/article/details/77918311 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+## 网络分析
 网络： 
 
 ![](./net-1.png)
