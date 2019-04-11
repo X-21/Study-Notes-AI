@@ -1,5 +1,28 @@
 # AlexNet
-#翻译：https://blog.csdn.net/qianqing13579/article/details/71381016?locationNum=15&fps=1
+翻译：https://blog.csdn.net/qianqing13579/article/details/71381016?locationNum=15&fps=1 
+资料：https://blog.csdn.net/langb2014/article/details/48286501 
+https://blog.csdn.net/program_developer/article/details/79430119 
+
+
+
+# 网络分析
+网络： 
+
+![](./net-1.png)
+
+
+
+具体参数： 
+
+
+| NO. | Layer | Input Size | Kernel Size | Stride | Output Size | Receptive Field |       神经元数量      |     参数数量      |       连接数数量      |
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+|1    |C1     |32\*32      |      5\*5\*6|   1    |28\*28\*6    |        5       |           4704         |        156        |         122304        |
+|2    |S2     |28\*28\*6   |      2\*2   |   2    |14\*14\*6    |        6       |           1176         |         12        |          5880         |
+|3    |C3     |14\*14\*6   |     5\*5\*16|   1    |10\*10\*16   |        14      |           1600         |         1516      |         151600        |
+|4    |S4     |10\*10\*16  |     2\*2    |   2    |5\*5\*16     |        16      |           400          |         32        |           2000        |
+|5    |C5     |5\*5\*16    |  5\*5\*120  |   1    |1\*1\*120    |        32      |           120          |       48120       |           48120       |
+|6    |F6     |1\*1\*120   |             |        |1\*1\*84     |                |           84           |       10164       |           10164       |
 
 ### 概要
 

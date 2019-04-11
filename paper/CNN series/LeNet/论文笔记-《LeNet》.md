@@ -1,16 +1,16 @@
 # LeNet
-翻译：https://blog.csdn.net/qianqing13579/article/details/71076261
-参考：https://www.jianshu.com/p/9997c6f5c01e
-https://cuijiahua.com/blog/2018/01/dl_3.html
-https://blog.csdn.net/qianqing13579/article/details/71076261
-https://blog.csdn.net/zoeyunjj/article/details/51643650
+翻译：https://blog.csdn.net/qianqing13579/article/details/71076261 
+参考：https://www.jianshu.com/p/9997c6f5c01e 
+https://cuijiahua.com/blog/2018/01/dl_3.html 
+https://blog.csdn.net/qianqing13579/article/details/71076261 
+https://blog.csdn.net/zoeyunjj/article/details/51643650 
 ##内容简述
 第一部分：简述。 
 不管是语音、图形、还是其他模式类型，模式识别纯靠手动设计是不可能的。过去使用两个模块来进行，第一个模块是特征提取器，第二个模块是可训练的分类器，分类器的适用范围又限制在了低维度空间的容易分别的类别，因此又需要合适的特征提取器去配合工作。但是过去十年中又有三方面的因素结合改变了这一现象：1.成本低、运算速度快的机器慢慢普及，使得可以直接使用“暴力计算”而不用太大程度依赖于计算方法的优化；2.大型数据集的可用性使得设计人员在设计识别系统时可以更多地依赖数据本身而不是依赖手动设计的特征提取器；3.最重要的一点是，在大数据集下，强大的机器学习技术变得可用了，也使得可以处理高维度输入、生成更复杂的决策函数。
 
 第二部分：对分离的字符识别的卷积网络 
 从两个方面说了全连接网络的弊端，引出卷积网络的位移不变性(shift invariance)可以通过权值共享实现、提取特征通过将隐藏结点的感受野(local receptive fields)限制在了局部。(Convolutional Networks force the extraction of local features by restricting the receptive fields of hidden units to be local.)
-A.卷积网络：CNN通过局部感受野(local receptive fields)，权值共享(shared weights)，下采样(sub-sampling)实现位移，缩放，和形变不变性(shift, scale, distortion invariance);LeNet-5，输入层是归一化并且字符位于中间的字符图像；每层的每个神经元的输入是上一层的局部几个神经元（局部感受野）；作卷积时同层每个不同的局部都共用同一个卷积核（权值共享）；在特征图中降低特征位置的精度的方式是降低特征图的空间分辨率，这个可以通过下采样层达到，下采样层通过求局部平均降低特征图的分辨率，并且降低了输出对平移和形变的敏感度；
+A.卷积网络：CNN通过局部感受野(local receptive fields)，权值共享(shared weights)，下采样(sub-sampling)实现位移，缩放，和形变不变性(shift, scale, distortion invariance);LeNet-5，输入层是归一化并且字符位于中间的字符图像；每层的每个神经元的输入是上一层的局部几个神经元（局部感受野）；作卷积时同层每个不同的局部都共用同一个卷积核（权值共享）；在特征图中降低特征位置的精度的方式是降低特征图的空间分辨率，这个可以通过下采样层达到，下采样层通过求局部平均降低特征图的分辨率，并且降低了输出对平移和形变的敏感度； 
 B.LeNet-5：
 
 LeNet-5：
@@ -31,13 +31,16 @@ LeNet-5：
 
 7.Output: 输出层(其实就是softmax loss)由欧式径向基函数（Euclidean Radial Basis Function,RBF）单元组成。
 
-F6：
+F6： 
+
 ![](./FC.png)
 
-感受野计算：
+感受野计算： 
+
 ![](./Receptive Field.png)
 
-C3层连接：
+C3层连接： 
+
 ![](./feature combined.png)
 
 | NO. | Layer | Input Size | Kernel Size | Stride | Output Size | Receptive Field |       神经元数量      |     参数数量      |       连接数数量      |
@@ -49,7 +52,7 @@ C3层连接：
 |5    |C5     |5\*5\*16    |  5\*5\*120  |   1    |1\*1\*120    |        32      |           120          |       48120       |           48120       |
 |6    |F6     |1\*1\*120   |             |        |1\*1\*84     |                |           84           |       10164       |           10164       |
 
-总计60000个参数。
+总计60000个参数，8084个神经元。
 
 ## Q&A
 Q：为什么采用C3层这种部分（不对称）连接的方式？
