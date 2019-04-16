@@ -1,5 +1,5 @@
 # Vgg
-#翻译：https://blog.csdn.net/quincuntial/article/details/77386778
+翻译：https://blog.csdn.net/quincuntial/article/details/77386778
 
 ### 概要
 
