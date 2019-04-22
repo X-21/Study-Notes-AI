@@ -1,5 +1,7 @@
 # MobileNetV1
-#翻译：http://tongtianta.site/paper/583
+翻译：http://tongtianta.site/paper/583 
+资料：https://blog.csdn.net/stesha_chen/article/details/82699331 
+
 
 ### 概要
 
@@ -14,13 +16,18 @@
 其代替原始卷积的方法:
 3x3 Conv | BN | ReLU  -->  3x3 Depthwise Conv | BN | ReLU | 1x1 Conv | BN | ReLU
 
+1.\[DF,DF,M\]拆成M个\[DF,DF,1\]的矩阵，每个通过\[DK,DK,1\]的卷积核得到\[DF,DF,1\]的矩阵，共是DK\*DK\*DF\*DF\*M次计算； 
+2.将\[DF,DF,M\]矩阵通过N个\[1,1,M\]的核得到\[DF,DF,N\]，共M\*DF\*DF\*N次计算。 
+
 【我的思考】
 成功引入了深度可分离卷积,使得计算量很小的情况小可以达到接近大网络模型的效果
 
 
 
 # MobileNetV2
-#翻译：http://tongtianta.site/paper/1783
+翻译：http://tongtianta.site/paper/1783 
+资料：https://blog.csdn.net/stesha_chen/article/details/82744320 
+https://blog.csdn.net/u011974639/article/details/79199588 
 
 ### 概要
 
