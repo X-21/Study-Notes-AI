@@ -28,7 +28,9 @@
 翻译：http://tongtianta.site/paper/1783 
 资料：https://blog.csdn.net/stesha_chen/article/details/82744320 
 https://blog.csdn.net/u011974639/article/details/79199588 
-
+https://blog.csdn.net/u014380165/article/details/79200958 
+https://blog.csdn.net/weixin_37675458/article/details/83350022 
+https://zhuanlan.zhihu.com/p/33075914 
 ### 概要
 
 倒置残差和线性瓶颈
@@ -52,4 +54,10 @@ MobileNetV2反其道而行，一开始先“扩张”，本文实验“扩张”
 
 【我的思考】
 相对V1主要两点改进:倒置残差和线性瓶颈
-都是避免小网络中对特征的损失过多而做的tricks
+都是避免小网络中对特征的损失过多而做的tricks 
+
+【思考2】
+不理解： 
+In supplemental materials, we show that if the input manifold can be embedded into a signiﬁcantly lower-dimensional subspace of the activation space then the ReLU transformation preserves the information while introducing the needed complexity into the set of expressible functions.
+说的是在补充物料中，提到了一点： 
+如果输入兴趣显著地嵌在激活空间的低维子空间里，那么ReLU变换将保留信息，同时为所需的复杂性引入一组可变达的函数。

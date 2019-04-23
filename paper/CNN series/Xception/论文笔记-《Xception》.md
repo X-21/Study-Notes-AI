@@ -1,5 +1,6 @@
 # Xception
-##### 翻译：http://tongtianta.site/paper/579
+翻译：http://tongtianta.site/paper/579 
+资料：https://www.jianshu.com/p/4708a09c4352 
 
 ### 概要
 
